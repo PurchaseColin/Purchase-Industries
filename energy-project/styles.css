@@ -1,0 +1,344 @@
+body,
+html {
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  margin: 25%;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.intro-text h1,
+.intro-text p,
+.intro-text button {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  align-items: center;
+  justify-content: center;
+  padding: 8px 11px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons :hover {
+  background-color: black;
+  color: white;
+}
+
+.ring1 {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 5px solid #d3d3d3;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  animation: ring 3s linear infinite 3s;
+  opacity: 1;
+}
+
+.ring2 {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 5px solid #c0c0c0;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  animation: ring 3s linear infinite 2s;
+  opacity: 1;
+}
+
+.ring3 {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 5px solid #a9a9a9;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  animation: ring 3s linear infinite 1.5s;
+  opacity: 1;
+}
+
+.ring4 {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 5px solid #808080;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  animation: ring 3s linear infinite 1s;
+  opacity: 1;
+}
+
+.grid img {
+  width: 100vw;
+  height: 100vh;
+  animation: shrink 0.5s ease-in 1s forwards;
+}
+
+.grid {
+  /* animation: spin 1s linear 4s infinite; */
+  overflow: hidden;
+}
+
+.main-grid {
+  animation: slide 0.5s ease 2s forwards;
+  position: relative;
+}
+
+/* Understanding */
+
+.grey-bar {
+  background-color: lightgrey;
+  height: 25vh;
+  width: 100vw;
+  position: absolute;
+  top: 100vh;
+  animation: grey-slide 0.3s ease-in-out 3s forwards;
+  margin-left: 0%;
+  border: none;
+  padding: 0;
+  z-index: -1;
+}
+
+/* .bar-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.bar-button {
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin: 23px 0px;
+  margin-left: 35px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.bar-button :hover {
+  background-color: black;
+  color: white;
+}
+
+.understanding-text {
+  position: absolute;
+  top: 300px;
+  opacity: 0;
+  animation: display-block 2s linear 2.5s forwards;
+}
+.understanding-text,
+.understanding-text2,
+.understanding-text3 {
+  padding: 15px 20px;
+}
+.understanding-text2 {
+  position: absolute;
+  top: 550px;
+  opacity: 0;
+  animation: display-block 2s linear 2.5s forwards;
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+
+/* be ever weary about things thar just happened to fall into place */
+
+/* one should always know why thinkgs are doing the things they are */
+.understanding-text3 {
+  position: absolute;
+  top: 700px;
+  padding-top: 500px;
+}
+
+.grey-bar2 {
+  background-color: lightgrey;
+  height: 25vh;
+  width: 100vw;
+  position: absolute;
+  top: 70vh;
+  right: -2295%;
+  animation: grey-slide 1s ease-in-out 3s forwards;
+  margin-left: 0;
+  border: none;
+  padding: 0;
+}
+
+.grey-bar2 p {
+  padding: 0 20px;
+  padding-top: 40px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+    border-radius: 50%;
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scaleY(0.3);
+    /* border-radius: 50%; */
+    border: none;
+    opacity: 0.5;
+  }
+}
+
+@keyframes slide {
+  from {
+  }
+
+  to {
+    transform: translateY(-37%);
+  }
+}
+
+@keyframes ring {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+}
+
+@keyframes grey-slide {
+  100% {
+    transform: translateY(-280%);
+  }
+}
+
+@keyframes display-block {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .grey-bar {
+  background-color: lightgrey;
+  height: 40px;
+  width: 100vw;
+  position: absolute;
+  top: 100vh;
+  animation: grey-slide 0.3s ease-in-out 3s forwards;
+  margin-left: 0%;
+  border: none;
+  padding: 0;
+} */
+
+/* Energy Based Productions */
+
+.production-main {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 25%;
+  top: auto;
+}
+
+.production-main-elements {
+  text-align: center;
+}
+
+.production-main-elements p {
+  font-size: 1.1rem;
+}
+
+.steel {
+  display: flex;
+  height: 50vh;
+  width: 50vw;
+  margin: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.plastic-main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+  width: 50vw;
+  margin: 25%;
+}
+
+.plastic-elements {
+  padding: 25% 0;
+}
+
+.plastic-button button {
+  align-items: center;
+  justify-content: center;
+  padding: 8px 11px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
